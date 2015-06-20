@@ -1,0 +1,208 @@
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\ApplicationIcon.png
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\properties.xml
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\MobiUwB.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\MobiUwB.pdb
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\pl-PL\MobiUwB.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\AppManifest.xaml
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Properties\WMAppManifest.xml
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\MobiUwB_Debug_AnyCPU.xap
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Microsoft.Expression.Controls.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Microsoft.Expression.Drawing.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\App.g.cs
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Controls\RoundButtons\RoundButton.g.cs
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\MainPage.g.cs
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\About\AboutPage.g.cs
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\Contact\ContactPage.g.cs
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\Settings\SettingsPage.g.cs
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\Settings\Templates\CheckBoxItem\View\CheckBoxDataTemplate.g.cs
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\Settings\Templates\ListPicker\View\ListPickerTemplate.g.cs
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\Settings\Templates\SwitchItem\View\SwitchDataTemplate.g.cs
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\Settings\Templates\TimePicker\View\TimePickerTemplate.g.cs
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\MobiUwB.g.resources
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\MobiUwB.Resources.AppResources.resources
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\MobiUwB.Resources.AppResources.pl-PL.resources
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\MobiUwB.csproj.GenerateResource.Cache
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\pl-PL\MobiUwB.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\MobiUwB.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\MobiUwB.pdb
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\XapCacheFile.xml
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\ToastIcons\3g.png
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\ToastIcons\4g.png
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\ToastIcons\no_connection.png
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\ToastIcons\pc.png
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\ToastIcons\unknown.png
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\ToastIcons\wifi.png
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Coding4Fun.Toolkit.Audio.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Coding4Fun.Toolkit.Controls.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Coding4Fun.Toolkit.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Coding4Fun.Toolkit.Net.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Coding4Fun.Toolkit.Storage.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\cs\Coding4Fun.Toolkit.Controls.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\da\Coding4Fun.Toolkit.Controls.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\de\Coding4Fun.Toolkit.Controls.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\es\Coding4Fun.Toolkit.Controls.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\fr\Coding4Fun.Toolkit.Controls.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\it\Coding4Fun.Toolkit.Controls.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ko\Coding4Fun.Toolkit.Controls.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\no\Coding4Fun.Toolkit.Controls.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\pl\Coding4Fun.Toolkit.Controls.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\pt\Coding4Fun.Toolkit.Controls.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ru\Coding4Fun.Toolkit.Controls.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\sk\Coding4Fun.Toolkit.Controls.resources.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\SomethingWrong\SomethingWrongPage.g.cs
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\SplashScreen\SplashScreenPage.g.cs
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\ApplicationIcon.png
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\properties.xml
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\ToastIcons\3g.png
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\ToastIcons\4g.png
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\ToastIcons\no_connection.png
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\ToastIcons\pc.png
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\ToastIcons\unknown.png
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Assets\ToastIcons\wifi.png
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\MobiUwB.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\MobiUwB.pdb
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\pl-PL\MobiUwB.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\AppManifest.xaml
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Properties\WMAppManifest.xml
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\MobiUwB_Debug_AnyCPU.xap
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Coding4Fun.Toolkit.Audio.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Coding4Fun.Toolkit.Controls.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Coding4Fun.Toolkit.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Coding4Fun.Toolkit.Net.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Coding4Fun.Toolkit.Storage.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Microsoft.Expression.Controls.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Microsoft.Phone.Controls.Toolkit.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\Microsoft.Expression.Drawing.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\cs\Coding4Fun.Toolkit.Controls.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\da\Coding4Fun.Toolkit.Controls.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\de\Coding4Fun.Toolkit.Controls.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\es\Coding4Fun.Toolkit.Controls.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\fr\Coding4Fun.Toolkit.Controls.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\it\Coding4Fun.Toolkit.Controls.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ko\Coding4Fun.Toolkit.Controls.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\no\Coding4Fun.Toolkit.Controls.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\pl\Coding4Fun.Toolkit.Controls.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\pt\Coding4Fun.Toolkit.Controls.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ru\Coding4Fun.Toolkit.Controls.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\sk\Coding4Fun.Toolkit.Controls.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\Bin\Release\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\App.g.cs
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Controls\RoundButtons\RoundButton.g.cs
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\MainPage.g.cs
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\About\AboutPage.g.cs
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\Contact\ContactPage.g.cs
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\Settings\SettingsPage.g.cs
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\Settings\Templates\CheckBoxItem\View\CheckBoxDataTemplate.g.cs
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\Settings\Templates\ListPicker\View\ListPickerTemplate.g.cs
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\Settings\Templates\SwitchItem\View\SwitchDataTemplate.g.cs
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\Settings\Templates\TimePicker\View\TimePickerTemplate.g.cs
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\SomethingWrong\SomethingWrongPage.g.cs
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\Views\SplashScreen\SplashScreenPage.g.cs
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\MobiUwB.g.resources
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\MobiUwB.Resources.AppResources.resources
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\MobiUwB.Resources.AppResources.pl-PL.resources
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\MobiUwB.csproj.GenerateResource.Cache
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\pl-PL\MobiUwB.resources.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\MobiUwB.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\MobiUwB.pdb
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\MobiUwBWindowsPhone\obj\Release\XapCacheFile.xml

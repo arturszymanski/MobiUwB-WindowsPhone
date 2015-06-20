@@ -1,0 +1,9 @@
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\NotificationsAgent\Bin\Debug\NotificationsAgent.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\NotificationsAgent\Bin\Debug\NotificationsAgent.pdb
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.dll
+G:\programowanie\C# Projects\VS2013\MobiUwBWindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.pdb
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\NotificationsAgent\Bin\Debug\NotificationsAgent.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\NotificationsAgent\Bin\Debug\NotificationsAgent.pdb
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.dll
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.pdb
+C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.csprojResolveAssemblyReference.cache
