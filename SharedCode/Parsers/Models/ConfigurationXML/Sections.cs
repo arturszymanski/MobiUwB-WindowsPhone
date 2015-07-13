@@ -1,5 +1,6 @@
 ﻿#region
 
+using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
@@ -9,12 +10,12 @@ namespace SharedCode.Parsers.Models.ConfigurationXML
 {
     public class Sections
     {
-        private List<Section> _sectionsLIst;
+        private List<Section> _sectionsList;
         [XmlElement("sekcja")]
         public List<Section> SectionsList
         {
-            get { return _sectionsLIst; }
-            set { _sectionsLIst = value; }
+            get { return _sectionsList; }
+            set { _sectionsList = value; }
         }
 
         private List<StaticSection> _staticSectionsList;
@@ -24,6 +25,19 @@ namespace SharedCode.Parsers.Models.ConfigurationXML
             get { return _staticSectionsList; }
             set { _staticSectionsList = value; }
         }
-        
+
+
+        public Section GetSectionById(String id)
+        {
+            Section result = null;
+            foreach (Section item in _sectionsList)
+            {
+                if (item.SectionId == id)
+                {
+                    return item;
+                }
+            }
+            return result;
+        }
     }
 }

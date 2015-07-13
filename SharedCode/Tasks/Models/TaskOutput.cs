@@ -21,7 +21,7 @@ namespace SharedCode.Tasks.Models
             errors.Add(errorMessage);
         }
 
-        public void addErrors(List<String> errorMessages)
+        public void addErrors(IList<String> errorMessages)
         {
             errors.AddRange(errorMessages);
         }

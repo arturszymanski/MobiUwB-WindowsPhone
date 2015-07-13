@@ -10,7 +10,6 @@ namespace SharedCode.Parsers
 {
     public static class ParserFactory
     {
-        //@"Assets/logouwb.png"
         public static List<InstitiuteModel> GenerateInstituteModels(
             List<Website> websites, String imagePath)
         {

@@ -7,3 +7,8 @@ C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\NotificationsAgent
 C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.dll
 C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.pdb
 C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.csprojResolveAssemblyReference.cache
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.csprojResolveAssemblyReference.cache
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.dll
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.pdb
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.Resources.Resources.resources
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.csproj.GenerateResource.Cache

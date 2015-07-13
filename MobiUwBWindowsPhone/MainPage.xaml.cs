@@ -14,6 +14,7 @@ using Microsoft.Phone.Shell;
 using MobiUwB.StartupConfig;
 using MobiUwB.Utilities;
 using SharedCode.Parsers;
+using SharedCode;
 
 #endregion
 
@@ -40,7 +41,8 @@ namespace MobiUwB
 
             List<InstitiuteModel> institiutesLst = 
                 ParserFactory.GenerateInstituteModels(
-                    StartupConfiguration.Properties.Websites.WebsiteList);
+                    StartupConfiguration.Properties.Websites.WebsiteList, 
+                    @"Assets/logouwb.png");
 
             InstitutesListBox.DataContext = institiutesLst;
 
@@ -131,7 +133,7 @@ namespace MobiUwB
                     selectedItem.Website;
                 try
                 {
-                    XmlParser.Serialize(
+                    App.XmlParser.Serialize(
                         StartupConfiguration.Properties,
                         StartupConfiguration.PropertiesFileName);
                 }

@@ -10,6 +10,8 @@ using Microsoft.Phone.Shell;
 using MobiUwB.BackgroundAgents;
 using MobiUwB.Connection;
 using MobiUwB.Resources;
+using MobiUwB.IO;
+using SharedCode.Parsers;
 
 #endregion
 
@@ -17,6 +19,10 @@ namespace MobiUwB
 {
     public partial class App : Application
     {
+        private IoManager _ioManager;
+        public static XmlParser XmlParser;
+
+
         private InternetChecker _internetChecker;
         private NotificationAgent _notificationAgent;
 
@@ -69,6 +75,8 @@ namespace MobiUwB
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            _ioManager = new IoManager();
+            XmlParser = new XmlParser(_ioManager);
             _internetChecker = new InternetChecker();
             _internetChecker.StartChecker();
             _notificationAgent = new NotificationAgent();

@@ -34,7 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="DataManagment\DataAccess\IReadData.cs" />
     <Compile Include="DataManagment\DataAccess\IWriteData.cs" />
     <Compile Include="DataManagment\DataManager.cs" />
@@ -43,6 +42,8 @@
     <Compile Include="IO\IIOManagment.cs" />
     <Compile Include="IO\DownloadResult.cs" />
     <Compile Include="IO\StreamType.cs" />
+    <Compile Include="Parsers\Json\JsonParser.cs" />
+    <Compile Include="Parsers\Json\Model\Feed.cs" />
     <Compile Include="Parsers\Models\ConfigurationXML\Address.cs" />
     <Compile Include="Parsers\Models\ConfigurationXML\Authors.cs" />
     <Compile Include="Parsers\Models\ConfigurationXML\Configuration.cs" />

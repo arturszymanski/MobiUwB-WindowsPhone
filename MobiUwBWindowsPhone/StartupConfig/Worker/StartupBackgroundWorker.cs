@@ -11,6 +11,7 @@ using MobiUwB.Utilities;
 using SharedCode.VersionControl;
 using SharedCode.VersionControl.Models;
 using SharedCode.Parsers;
+using MobiUwB.IO;
 
 #endregion
 
@@ -22,11 +23,9 @@ namespace MobiUwB.StartupConfig.Worker
 
         private String _readWriteXmlPath;
         private String _configurationXmlPath;
-        private XmlParser parser; 
 
         public StartupBackgroundWorker()
         {
-            parser = new XmlParser();
             SetEvents();
         }
 
@@ -87,7 +86,7 @@ namespace MobiUwB.StartupConfig.Worker
 
             if (versioningResult.Succeeded)
             {
-                XmlParser.Deserialize(_configurationXmlPath, out result.Configuration);
+                App.XmlParser.Deserialize(_configurationXmlPath, out result.Configuration);
             }
             else
             {
@@ -112,7 +111,7 @@ namespace MobiUwB.StartupConfig.Worker
             {
                 await Globals.IoManager.CopyFileFromAssetsToStorageFolder(fileName);
             }
-            XmlParser.Deserialize(fileName,
+            App.XmlParser.Deserialize(fileName,
                 out result.Properties);
         }
     }

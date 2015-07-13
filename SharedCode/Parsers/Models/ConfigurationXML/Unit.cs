@@ -103,6 +103,16 @@ namespace SharedCode.Parsers.Models.ConfigurationXML
             set { _fax = value; }
         }
 
+
+        private String _apiUrlString;
+        [XmlElement("apiUrl")]
+        public String ApiUrlString
+        {
+            get { return _apiUrlString; }
+            set { _apiUrlString = value; }
+        }
+
+
         private String BeautifyEmail(String uglyEmail)
         {
             return uglyEmail.

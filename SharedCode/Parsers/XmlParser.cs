@@ -22,10 +22,10 @@ namespace SharedCode.Parsers
 
 
         public void Deserialize<T>(
-            String xmlFilePath,
+            String xmlFilePName,
             out T rootElement)
         {
-            String fileName = Path.GetFileName(xmlFilePath);
+            String fileName = Path.GetFileName(xmlFilePName);
 
             Stream stream;
             _ioManager.GetFileStreamFromStorageFolder(fileName,StreamType.ForRead, out stream);

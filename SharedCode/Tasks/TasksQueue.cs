@@ -26,7 +26,7 @@ namespace SharedCode.Tasks
             {
                 ITask<Out> task = tuple.task;
                 TaskInput input = tuple.taskInput;
-                task.execute(input, outputToFill);
+                task.Execute(input, outputToFill);
             }
         }
 

@@ -101,7 +101,6 @@
     <Compile Include="Controls\RoundButtons\RoundButtonModel.cs" />
     <Compile Include="DataAccess\ReadData.cs" />
     <Compile Include="DataAccess\WriteData.cs" />
-    <Compile Include="InstitiuteModel.cs" />
     <Compile Include="IO\IOManager.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -257,10 +256,13 @@
     <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\AppResources.pl-PL.resx" />
+    <EmbeddedResource Include="Resources\AppResources.pl-PL.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\AppResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

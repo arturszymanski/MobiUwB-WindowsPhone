@@ -3,3 +3,8 @@ C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\SharedCode\bin\Deb
 C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\SharedCode\bin\Debug\SharedCode.pdb
 C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\SharedCode\obj\Debug\SharedCode.dll
 C:\Users\Artur\Documents\Programowanie\C#\MobiUwBWindowsPhone\SharedCode\obj\Debug\SharedCode.pdb
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\SharedCode\obj\Debug\SharedCode.csprojResolveAssemblyReference.cache
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\SharedCode\obj\Debug\SharedCode.dll
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\SharedCode\bin\Debug\SharedCode.dll
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\SharedCode\bin\Debug\SharedCode.pdb
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\SharedCode\obj\Debug\SharedCode.pdb

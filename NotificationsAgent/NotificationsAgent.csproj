@@ -84,7 +84,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\ReadData.cs" />
+    <Compile Include="DataAccess\WriteData.cs" />
     <Compile Include="DataInitialize\DataInitializeTaskOutput.cs" />
+    <Compile Include="DataInitialize\Tasks\CategoriesFinder\CategoriesFinderTask.cs" />
+    <Compile Include="DataInitialize\Tasks\ConfigurationXml\ConfigurationXmlTask.cs" />
+    <Compile Include="DataInitialize\Tasks\PropertiesXml\PropertiesXmlTask.cs" />
+    <Compile Include="DataInitialize\Tasks\PropertiesXml\PropertiesXmlTaskInput.cs" />
+    <Compile Include="DataInitialize\Tasks\VersionController\VersionControllerTask.cs" />
+    <Compile Include="DataInitialize\Tasks\VersionController\VersionControllerTaskInput.cs" />
+    <Compile Include="IoManager.cs" />
+    <Compile Include="Resources\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RestolableDateTime.cs" />
     <Compile Include="ScheduledAgent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -93,6 +108,12 @@
       <Project>{ad9c06ff-8a78-4e5c-abd2-7647837ee2a7}</Project>
       <Name>SharedCode</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

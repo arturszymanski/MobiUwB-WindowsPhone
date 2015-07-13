@@ -14,18 +14,46 @@ using SharedCode.Tasks;
 using SharedCode.VersionControl;
 using SharedCode.VersionControl.Models;
 using SharedCode.Parsers.Models.ConfigurationXML;
+using SharedCode.Parsers.Models;
+using SharedCode.Parsers.Json.Model;
+using NotificationsAgent.DataAccess;
+using SharedCode.DataManagment;
 
+using Section = SharedCode.Parsers.Models.ConfigurationXML.Section;
+using Windows.Storage;
+using System.Threading.Tasks;
+using SharedCode.Parsers.Json;
+using SharedCode.Parsers;
+using NotificationsAgent.DataInitialize.Tasks.PropertiesXml;
+using NotificationsAgent.DataInitialize.Tasks.VersionController;
+using NotificationsAgent.DataInitialize.Tasks.ConfigurationXml;
+using NotificationsAgent.DataInitialize.Tasks.CategoriesFinder;
 #endregion
 
 namespace NotificationsAgent
 {
     public class ScheduledAgent : ScheduledTaskAgent
     {
+        public static readonly DataManager _dataManager;
+        public static readonly WriteData WriteData;
+        public static readonly ReadData ReadData;
+
+        public static readonly XmlParser XmlParser;
+        public static readonly IoManager IoManager;
+        public static readonly String PropertiesFileName = "properties.xml";
+        public static readonly String ConfigurationFileName = "configuration.xml";
+
         /// <remarks>
         /// ScheduledAgent constructor, initializes the UnhandledException handler
         /// </remarks>
         static ScheduledAgent()
         {
+            WriteData = new WriteData();
+            ReadData = new ReadData();
+            _dataManager = new DataManager(ReadData, WriteData);
+            IoManager = new IoManager();
+            XmlParser = new XmlParser(IoManager);
+
             // Subscribe to the managed exception handler
             Deployment.Current.Dispatcher.BeginInvoke(delegate
             {
@@ -155,24 +183,21 @@ namespace NotificationsAgent
 
         private void runNotificationsPublisher()
         {
-            Unit unit = dataInitializeTaskOutput.configXmlResult.getCurrentUniversityUnit();
+            Unit unit = dataInitializeTaskOutput.configXmlResult.GetUnitById("Jakieś id ...");
             int i = 0;
-            foreach (String category in dataInitializeTaskOutput.categories)
+            foreach (KeyValuePair<String, Boolean> category in dataInitializeTaskOutput.categories)
             {
-                if(category.getValue())
+                if(category.Value)
                 {
-                    Section section = unit.getSectionById(category.getKey());
+                    Section section = unit.Sections.GetSectionById(category.Key);
                     List<Feed> newestFeeds = getNewElements(section, unit);
                     publishNotifications(newestFeeds,section,i);
 
-                    ServicePreferencesManager servicePreferencesManager =
-                            ServicePreferencesManager.getInstance(
-                                    getBaseContext());
+                    RestolableDateTime RestolableDateTime = new RestolableDateTime(DateTime.Now);
 
-                    servicePreferencesManager.setLastKnownDate(
-                            unit.Name,
-                            category.getKey(),
-                            DateTime.Now);
+                    _dataManager.StoreData(
+                        RestolableDateTime, 
+                        category.Key);
                 }
                 i++;
             }
@@ -180,57 +205,48 @@ namespace NotificationsAgent
 
         private List<Feed> getNewElements(Section section, Unit unit)
         {
-            List<Feed> notificationElements = new ArrayList<Feed>();
+            List<Feed> notificationElements = new List<Feed>();
 
-            SharedPreferences shareds = getSharedPreferences(
-                    VersionControllerTask.SHARED_PREFERENCES_SERVICE_NAME,
-                    Context.MODE_PRIVATE);
+            VersionController versionController = 
+                new VersionController(
+                    IoManager, 
+                    ReadData, 
+                    WriteData);
+            String feedsFileUri = unit.ApiUrlString + section.SectionId;
 
-            VersionController versionController = new VersionController(shareds);
-            String feedsFileUri = unit.getApiUrl() + section.id;
-
-            Context baseContext = getBaseContext();
-
-            String overwritePath = baseContext.getFilesDir().getPath();
-
-            File overwriteFilePath = new File(overwritePath,section.id);
-
+            String folder = ApplicationData.Current.LocalFolder.Path;
+            String fullSavePath = Path.Combine(
+                folder,
+                section.SectionId);
 
             VersioningRequest versioningRequest =
-                    new VersioningRequest(feedsFileUri,
-                                          overwriteFilePath.getAbsolutePath());
+                    new VersioningRequest(
+                        feedsFileUri,
+                        fullSavePath);
 
-            VersioningResult versioningResult =
-                    versionController.getNewestFile(versioningRequest);
+            Task<VersioningResult> versioningResultTask = 
+                versionController.GetNewestFile(versioningRequest);
 
-            List<Feed> newestFeeds = new ArrayList<Feed>();
-            if(versioningResult.getSucceeded())
+            VersioningResult versioningResult = versioningResultTask.Result;
+
+            List<Feed> newestFeeds = new List<Feed>();
+            if (versioningResult.Succeeded)
             {
-                String jsonContent = versioningResult.getFileContent();
+                String jsonContent = versioningResult.GetFileContent();
 
                 JsonParser jsonParser = new JsonParser();
-                ServicePreferencesManager servicePreferencesManager =
-                        ServicePreferencesManager.getInstance(getBaseContext());
-                try
+
+                notificationElements = jsonParser.parseFeedsJson(jsonContent);
+
+                RestolableDateTime lastKnownDate =
+                    _dataManager.RestoreData<RestolableDateTime>(unit.Name);
+
+                foreach (Feed feed in notificationElements)
                 {
-                    notificationElements = jsonParser.parseFeedsJson(jsonContent);
-
-                    Date lastKnownDate = servicePreferencesManager.getLastKnownDate(unit.Name,
-                                                                                    section.id);
-
-
-                    for(Feed feed : notificationElements)
+                    if (feed.DateTime > lastKnownDate.DateTime)
                     {
-                        if(feed.getDate().after(lastKnownDate))
-                        {
-                            newestFeeds.add(feed);
-                        }
+                        newestFeeds.Add(feed);
                     }
-
-                }
-                catch (JSONException e)
-                {
-                    Log.e("MobiUwB",e.getMessage());
                 }
             }
             return newestFeeds;
@@ -238,6 +254,7 @@ namespace NotificationsAgent
 
         private bool InitializeData()
         {
+
             TasksQueue<DataInitializeTaskOutput> tasksQueue =
                     new TasksQueue<DataInitializeTaskOutput>();
 
@@ -247,16 +264,14 @@ namespace NotificationsAgent
 
             PropertiesXmlTask propertiesXmlTask = new PropertiesXmlTask();
             PropertiesXmlTaskInput propertiesXmlTaskInput = new PropertiesXmlTaskInput(
-                "properties.xml",
-                getBaseContext());
+                "properties.xml");
             tasksQueue.add(propertiesXmlTask, propertiesXmlTaskInput);
 
 
             VersionControllerTask versionControllerTask = new VersionControllerTask();
             VersionControllerTaskInput versionControllerTaskInput =
                 new VersionControllerTaskInput(
-                    "config.xml",
-                    getBaseContext());
+                    "config.xml");
             tasksQueue.add(versionControllerTask, versionControllerTaskInput);
 
 
@@ -264,12 +279,9 @@ namespace NotificationsAgent
             tasksQueue.add(configurationXmlTask, null);
 
 
-            SettingsPreferenceManagerTask settingsPreferenceManagerTask =
-                new SettingsPreferenceManagerTask();
-            SettingsPreferenceManagerTaskInput settingsPreferenceManagerTaskInput =
-                new SettingsPreferenceManagerTaskInput(
-                    getBaseContext());
-            tasksQueue.add(settingsPreferenceManagerTask, settingsPreferenceManagerTaskInput);
+            CategoriesFinderTask settingsPreferenceManagerTask =
+                new CategoriesFinderTask();
+            tasksQueue.add(settingsPreferenceManagerTask, null);
 
 
             tasksQueue.performAll(dataInitializeTaskOutput);
@@ -282,11 +294,10 @@ namespace NotificationsAgent
                                           int notificationId)
         {
             int feedsAmount = newestFeeds.Count;
-            if(feedsAmount > 0)
+            if (feedsAmount > 0)
             {
-                //TODO; String contentText = AppResources.
-
-                ShellToast toast = CreateShellToast(section.title, contentText + feedsAmount);
+                ShellToast toast = CreateShellToast(section.SectionTitle,  
+                    Resources.Resources.NotificationContentText + feedsAmount);
                 toast.Show();
             }
         }
