@@ -36,7 +36,7 @@ namespace SharedCode
                 stringBuilder.ToString());
         }
 
-        public IList<String> GetErrors()
+        public List<String> GetErrors()
         {
             return _errors;
         }

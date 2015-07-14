@@ -33,7 +33,7 @@ namespace SharedCode.Tasks.Models
 
         public bool isValid()
         {
-            return errors.Count != 0;
+            return errors.Count == 0;
         }
     }
 }

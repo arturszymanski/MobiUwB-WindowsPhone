@@ -104,7 +104,8 @@ namespace NotificationsAgent
 
         private void processNotifications(bool succeeded)
         {
-            if(dataInitializeTaskOutput.isNotificationActive &&
+            //TODO usunąć wykrzyknik
+            if(!dataInitializeTaskOutput.isNotificationActive &&
                     succeeded)
             {
                 notificationsLoop();
@@ -116,7 +117,8 @@ namespace NotificationsAgent
             long interval = dataInitializeTaskOutput.interval;
             DateTime from = dataInitializeTaskOutput.timeRangeFrom;
             DateTime to = dataInitializeTaskOutput.timeRangeTo;
-            while(active)
+            //TODO usunąć wykrzyknik
+            while(!active)
             {
                 notificationsLoopTick(interval, from, to);
             }
@@ -205,8 +207,6 @@ namespace NotificationsAgent
 
         private List<Feed> getNewElements(Section section, Unit unit)
         {
-            List<Feed> notificationElements = new List<Feed>();
-
             VersionController versionController = 
                 new VersionController(
                     IoManager, 
@@ -236,7 +236,8 @@ namespace NotificationsAgent
 
                 JsonParser jsonParser = new JsonParser();
 
-                notificationElements = jsonParser.parseFeedsJson(jsonContent);
+                FeedsRoot notificationElements = 
+                    jsonParser.ParseFeedsJson(jsonContent);
 
                 RestolableDateTime lastKnownDate =
                     _dataManager.RestoreData<RestolableDateTime>(unit.Name);

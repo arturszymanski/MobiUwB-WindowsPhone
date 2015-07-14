@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SharedCode.Parsers.Json.Model
 {
+    [DataContract]
     public class Feed
     {
         private String _title;
+        [DataMember(Name="tytul")]
         public String Title
         {
             get { return _title; }
@@ -17,6 +20,7 @@ namespace SharedCode.Parsers.Json.Model
 
 
         private String _content;
+        [DataMember(Name="tresc")]
         public String Content
         {
             get { return _content; }
@@ -25,18 +29,11 @@ namespace SharedCode.Parsers.Json.Model
 
 
         private DateTime _dateTime;
+        [DataMember(Name = "data")]
         public DateTime DateTime
         {
             get { return _dateTime; }
             set { _dateTime = value; }
-        }
-
-
-        public Feed(String title, String content, DateTime dateTime)
-        {
-            this._title = title;
-            this._content = content;
-            this._dateTime = dateTime;
         }
     }
 }
