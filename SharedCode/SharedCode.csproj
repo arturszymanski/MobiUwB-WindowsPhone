@@ -38,6 +38,7 @@
     <Compile Include="DataManagment\DataAccess\IWriteData.cs" />
     <Compile Include="DataManagment\DataManager.cs" />
     <Compile Include="DataManagment\IRestolable.cs" />
+    <Compile Include="Defaults.cs" />
     <Compile Include="InstitiuteModel.cs" />
     <Compile Include="IO\IIOManagment.cs" />
     <Compile Include="IO\DownloadResult.cs" />
@@ -67,6 +68,8 @@
     <Compile Include="Tasks\Models\TaskInput.cs" />
     <Compile Include="Tasks\Models\TaskOutput.cs" />
     <Compile Include="Tasks\TasksQueue.cs" />
+    <Compile Include="Utilities\SettingsCategoriesValuesWrapper.cs" />
+    <Compile Include="Utilities\Variables.cs" />
     <Compile Include="VersionControl\Models\VersioningRequest.cs" />
     <Compile Include="VersionControl\Models\VersioningResult.cs" />
     <Compile Include="VersionControl\VersionController.cs" />

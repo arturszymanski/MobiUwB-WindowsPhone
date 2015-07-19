@@ -41,6 +41,15 @@ namespace MobiUwB.Views.Settings.Templates
             set { _text = value; }
         }
 
+        private String _id;
+
+        public String ID
+        {
+            get { return _id; }
+            private set { _id = value; }
+        }
+
+
         public TemplateModel()
         {
             _children = new List<TemplateModel>();
@@ -49,60 +58,65 @@ namespace MobiUwB.Views.Settings.Templates
         public TemplateModel GetDefaults()
         {
             SwitchTemplateModel notifications = new SwitchTemplateModel();
+            notifications.ID = ;
             notifications.Text = AppResources.SettingsPageCategoryNotifications;
             notifications.IsChecked = true;
 
             ListPickerTemplateModel<Int64> frequency = new ListPickerTemplateModel<Int64>();
+            frequency.ID = ;
             frequency.Text = AppResources.SettingsPageCategoryFrequency;
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
                     "1" + AppResources.SettingsListItemMinute,
-                    60 * 1000));
+                    ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
                     "10" + AppResources.SettingsListItemMinute,
-                    10 * 60 * 1000));
+                    ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
                     "1" + AppResources.SettingsListItemHour,
-                    3600 * 1000));
+                    ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
                     "2" + AppResources.SettingsListItemHour,
-                    2 * 3600 * 1000));
+                    ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
                     "6" + AppResources.SettingsListItemHour,
-                    6 * 3600 * 1000));
+                    ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
                     "12" + AppResources.SettingsListItemHour,
-                    12 * 3600 * 1000));
+                    ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
                     "1" + AppResources.SettingsListItemDay,
-                    24 * 3600 * 1000));
+                    ));
 
             frequency.Value = 0;
             notifications.Children.Add(frequency);
 
             SwitchTemplateModel timeRange = new SwitchTemplateModel();
+            timeRange.ID = ;
             timeRange.Text = AppResources.SettingsPageCategoryTimeRange;
             timeRange.IsChecked = true;
 
             TimePickerTemplateModel from = new TimePickerTemplateModel();
+            @from.ID = ;
             @from.Text = AppResources.SettingsPageCategoryFrom;
             @from.Value = DateTime.Now;
             timeRange.Children.Add(@from);
 
             TimePickerTemplateModel to = new TimePickerTemplateModel();
+            to.ID = "to";
             to.Text = AppResources.SettingsPageCategoryTo;
             to.Value = DateTime.Now;
             timeRange.Children.Add(to);
@@ -116,6 +130,7 @@ namespace MobiUwB.Views.Settings.Templates
                 foreach (Section section in sections)
                 {
                     CheckBoxTemplateModel category = new CheckBoxTemplateModel();
+                    category.ID = section.SectionId;
                     category.Text = section.SectionTitle;
                     category.IsChecked = section.SectionNotifications;
                     notifications.Children.Add(category);
