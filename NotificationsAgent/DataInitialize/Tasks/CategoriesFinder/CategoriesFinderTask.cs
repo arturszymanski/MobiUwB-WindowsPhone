@@ -2,122 +2,92 @@
 using SharedCode.Tasks.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.IO.IsolatedStorage;
 using System.Linq;
+using System.Runtime.Serialization.Json;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using SharedCode.Utilities;
+using SharedCode.Parsers.Models.ConfigurationXML;
 
 namespace NotificationsAgent.DataInitialize.Tasks.CategoriesFinder
 {
     public class CategoriesFinderTask : ITask<DataInitializeTaskOutput>
     {
-        public String notificationText;
-        public String timeRangeText;
-
-        public String frequencyText;
-
-        public String fromText;
-        public String toText;
-
         public void Execute(TaskInput input, DataInitializeTaskOutput output)
         {
-            //List<TemplateModel> itemModels = 
-            //    settingsPreferencesManager.restore(output.configXmlResult);
+            using (Mutex mutex = new Mutex(true, Variables.SettingsValuesMutexName))
+            {
+                mutex.WaitOne();
+                try
+                {
+                    IsolatedStorageFile isolatedStorageFile = IsolatedStorageFile.GetUserStoreForApplication();
+                    if (isolatedStorageFile.FileExists(Variables.SettingsValuesFileName))
+                    {
+                        using (IsolatedStorageFileStream isolatedStorageFileStream = new
+                            IsolatedStorageFileStream(
+                            Variables.SettingsValuesFileName,
+                            FileMode.Open,
+                            isolatedStorageFile))
+                        {
+                            DataContractJsonSerializer dataContractJsonSerializer =
+                                new DataContractJsonSerializer(
+                                    typeof(SettingsCategoriesValuesWrapper));
 
+                            SettingsCategoriesValuesWrapper settingsCategoriesValuesWrapper = 
+                                (SettingsCategoriesValuesWrapper) dataContractJsonSerializer.ReadObject(
+                                    isolatedStorageFileStream);
+                            output.allValues = settingsCategoriesValuesWrapper.SettingsCategoriesValues;
 
-
-            //notificationText = baseContextResources.getString(
-            //        R.string.settings_category_annoucements);
-            //timeRangeText = baseContextResources.getString(
-            //    R.string.settings_subcategory_time_range);
-            //frequencyText = baseContextResources.getString(
-            //    R.string.settings_subcategory_frequency);
-            //fromText = baseContextResources.getString(
-            //        R.string.settings_subsubcategory_from);
-            //toText = baseContextResources.getString(
-            //        R.string.settings_subsubcategory_to);
-
-            //try
-            //{
-            //    recursiveFindModel(itemModels, output);
-            //    int[] array = baseContextResources.getIntArray(
-            //            R.array.frequencies_values);
-            //    output.interval = array[output.intervalIndex];
-            //}
-            //catch (Exception e)
-            //{
-            //    output.addError(e.getMessage());
-            //}
+                            FillValuesFromDictionary(output);
+                        }
+                    }
+                    else
+                    {
+                        FillValuesFromConfigXml(output);
+                    }
+                }
+                catch (Exception e)
+                {
+                    output.addError(e.Message);
+                }
+                finally
+                {
+                    mutex.ReleaseMutex();
+                }
+            }
         }
 
-        private void recursiveFindModel(DataInitializeTaskOutput output)
+        private void FillValuesFromDictionary(DataInitializeTaskOutput output)
         {
-            //for(ItemModel itemModel : itemModels)
-            //{
-            //    if(itemModel instanceof CheckBoxItemModel)
-            //    {
-            //        CheckBoxItemModel checkBoxItemModel = (CheckBoxItemModel)itemModel;
+        }
 
-            //        String key = checkBoxItemModel.getId();
-            //        Boolean selected = checkBoxItemModel.isChecked();
-            //        if(!output.categories.containsKey(key))
-            //        {
-            //            output.categories.put(key, selected);
-            //        }
-            //        else
-            //        {
-            //            throw new IllegalArgumentException("Unhandled CheckBoxItemModel");
-            //        }
-            //    }
-            //    else if(itemModel instanceof ExpandableOnOffItemModel)
-            //    {
-            //        ExpandableOnOffItemModel expandableOnOffItemModel = (ExpandableOnOffItemModel)itemModel;
+        private void FillValuesFromConfigXml(DataInitializeTaskOutput output)
+        {
+            //TODO id ...
+            Unit unit = output.configXmlResult.GetUnitById("Id z dupy wzięte");
+            output.isNotificationActive = IsNotificationsActive(unit);
 
-            //        if(expandableOnOffItemModel.getText().equals(notificationText))
-            //        {
-            //            output.isNotificationActive = expandableOnOffItemModel.isExpanded();
-            //        }
-            //        else if(expandableOnOffItemModel.getText().equals(timeRangeText))
-            //        {
-            //            output.isTimeRangeActive = expandableOnOffItemModel.isExpanded();
-            //        }
-            //        else
-            //        {
-            //            throw new IllegalArgumentException("Unhandled ExpandableOnOffItemModel");
-            //        }
-            //    }
-            //    else if(itemModel instanceof ListPickerItemModel)
-            //    {
-            //        ListPickerItemModel listPickerItemModel = (ListPickerItemModel)itemModel;
+            output.isTimeRangeActive = 
+            //output.interval
+            //output.intervalIndex
+            //output.timeRangeFrom
+            //output.timeRangeTo
+            //output.categories
+        }
 
-            //        if(listPickerItemModel.getText().equals(frequencyText))
-            //        {
-            //            output.intervalIndex = listPickerItemModel.getValue();
-            //        }
-            //        else
-            //        {
-            //            throw new IllegalArgumentException("Unhandled ListPickerItemModel");
-            //        }
-            //    }
-            //    else if(itemModel instanceof TimePickerItemModel)
-            //    {
-            //        TimePickerItemModel timePickerItemModel = (TimePickerItemModel)itemModel;
-
-            //        if(timePickerItemModel.getText().equals(fromText))
-            //        {
-            //            output.timeRangeFrom = timePickerItemModel.getValue();
-            //        }
-            //        else if(timePickerItemModel.getText().equals(toText))
-            //        {
-            //            output.timeRangeTo = timePickerItemModel.getValue();
-            //        }
-            //        else
-            //        {
-            //            throw new IllegalArgumentException("Unhandled TimePickerItemModel");
-            //        }
-            //    }
-
-            //    recursiveFindModel(itemModel.nestedModels,output);
-            //}
+        private Boolean IsNotificationsActive(Unit unit)
+        {
+            foreach (Section section in unit.Sections.SectionsList)
+            {
+                if (section.SectionNotifications)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

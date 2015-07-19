@@ -29,10 +29,12 @@ namespace NotificationsAgent.DataInitialize
         public int intervalIndex;
         public long interval;
 
+        public Dictionary<String, object> allValues;
         public Dictionary<String, Boolean> categories;
 
         public DataInitializeTaskOutput()
         {
+            allValues = new Dictionary<String, object>();
             categories = new Dictionary<String, Boolean>();
         }
     }

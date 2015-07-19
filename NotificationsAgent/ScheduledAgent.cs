@@ -104,8 +104,7 @@ namespace NotificationsAgent
 
         private void processNotifications(bool succeeded)
         {
-            //TODO usunąć wykrzyknik
-            if(!dataInitializeTaskOutput.isNotificationActive &&
+            if(dataInitializeTaskOutput.isNotificationActive &&
                     succeeded)
             {
                 notificationsLoop();
@@ -187,25 +186,27 @@ namespace NotificationsAgent
         {
             Unit unit = dataInitializeTaskOutput.configXmlResult.GetUnitById("Jakieś id ...");
             int i = 0;
-            foreach (KeyValuePair<String, Boolean> category in dataInitializeTaskOutput.categories)
+            foreach (KeyValuePair<String, object> category in dataInitializeTaskOutput.allValues)
             {
-                if(category.Value)
-                {
-                    Section section = unit.Sections.GetSectionById(category.Key);
-                    List<Feed> newestFeeds = getNewElements(section, unit);
-                    publishNotifications(newestFeeds,section,i);
 
-                    RestolableDateTime RestolableDateTime = new RestolableDateTime(DateTime.Now);
+                //TODO przywrócić :P
+                //if(category.Value)
+                //{
+                //    Section section = unit.Sections.GetSectionById(category.Key);
+                //    List<Feed> newestFeeds = GetNewElements(section, unit);
+                //    publishNotifications(newestFeeds,section,i);
 
-                    _dataManager.StoreData(
-                        RestolableDateTime, 
-                        category.Key);
-                }
-                i++;
+                //    RestolableDateTime RestolableDateTime = new RestolableDateTime(DateTime.Now);
+
+                //    _dataManager.StoreData(
+                //        RestolableDateTime, 
+                //        category.Key);
+                //}
+                //i++;
             }
         }
 
-        private List<Feed> getNewElements(Section section, Unit unit)
+        private List<Feed> GetNewElements(Section section, Unit unit)
         {
             VersionController versionController = 
                 new VersionController(
