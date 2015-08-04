@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 #endregion
@@ -10,19 +11,47 @@ namespace SharedCode
 {
     public abstract class Result
     {
-        private readonly List<String> _errors;
-
-        public void AddErrorMessage(String error)
+        private readonly List<Exception> _exceptions;
+        
+        public void AddException(Exception exception)
         {
-            _errors.Add(error);
+            _exceptions.Add(exception);
+        }
+        public void AddExceptions(List<Exception> exceptions)
+        {
+            foreach (Exception exception in exceptions)
+            {
+                AddException(exception);
+            }
         }
 
-        public void AddErrorMessages(ICollection<String> errors)
+        public List<Exception> GetExceptions()
         {
-            _errors.AddRange(errors);
+            return _exceptions;
         }
 
-        public void AddError(Exception exception)
+        public bool Succeeded
+        {
+            get
+            {
+                return _exceptions.Count == 0; 
+            }
+        }
+
+        public Result()
+        {
+            _exceptions = new List<Exception>();
+        }
+
+        public void PrintExceptions()
+        {
+            foreach (Exception exception in _exceptions)
+            {
+                PrintException(exception);
+            }
+        }
+
+        public static void PrintException(Exception exception)
         {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("Error Message: ");
@@ -31,27 +60,8 @@ namespace SharedCode
             stringBuilder.Append(exception.InnerException);
             stringBuilder.Append("\nCallStack: ");
             stringBuilder.Append(exception.StackTrace);
-            
-            _errors.Add(
-                stringBuilder.ToString());
-        }
-
-        public List<String> GetErrors()
-        {
-            return _errors;
-        }
-
-        public bool Succeeded
-        {
-            get
-            {
-                return _errors.Count == 0; 
-            }
-        }
-
-        public Result()
-        {
-            _errors = new List<String>();
+            stringBuilder.Append('\n');
+            Debug.WriteLine(stringBuilder.ToString());
         }
     }
 }

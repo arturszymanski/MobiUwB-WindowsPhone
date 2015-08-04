@@ -29,6 +29,8 @@ namespace NotificationsAgent.DataInitialize
         public int intervalIndex;
         public long interval;
 
+        public String CurrentUnitId;
+
         public Dictionary<String, object> allValues;
         public Dictionary<String, Boolean> categories;
 

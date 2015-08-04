@@ -91,6 +91,7 @@
     <Compile Include="DataInitialize\Tasks\ConfigurationXml\ConfigurationXmlTask.cs" />
     <Compile Include="DataInitialize\Tasks\PropertiesXml\PropertiesXmlTask.cs" />
     <Compile Include="DataInitialize\Tasks\PropertiesXml\PropertiesXmlTaskInput.cs" />
+    <Compile Include="DataInitialize\Tasks\UnitIdFinder\UnitIdFinderTask.cs" />
     <Compile Include="DataInitialize\Tasks\VersionController\VersionControllerTask.cs" />
     <Compile Include="DataInitialize\Tasks\VersionController\VersionControllerTaskInput.cs" />
     <Compile Include="IoManager.cs" />

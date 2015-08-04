@@ -20,7 +20,7 @@ namespace NotificationsAgent.DataInitialize.Tasks.ConfigurationXml
             }
             catch (Exception e)
             {
-                output.addError(e.Message);
+                output.AddException(e);
             }
         }
     }

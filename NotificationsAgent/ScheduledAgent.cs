@@ -28,6 +28,8 @@ using NotificationsAgent.DataInitialize.Tasks.PropertiesXml;
 using NotificationsAgent.DataInitialize.Tasks.VersionController;
 using NotificationsAgent.DataInitialize.Tasks.ConfigurationXml;
 using NotificationsAgent.DataInitialize.Tasks.CategoriesFinder;
+using NotificationsAgent.DataInitialize.Tasks.UnitIdFinder;
+
 #endregion
 
 namespace NotificationsAgent
@@ -42,6 +44,10 @@ namespace NotificationsAgent
         public static readonly IoManager IoManager;
         public static readonly String PropertiesFileName = "properties.xml";
         public static readonly String ConfigurationFileName = "configuration.xml";
+
+        private DataInitializeTaskOutput dataInitializeTaskOutput;
+        private long lastCheckTime;
+        private long currentTime;
 
         /// <remarks>
         /// ScheduledAgent constructor, initializes the UnhandledException handler
@@ -83,6 +89,7 @@ namespace NotificationsAgent
         protected override void OnInvoke(ScheduledTask task)
         {
             bool succeeded = InitializeData();
+
             processNotifications(succeeded);
 
             NotifyComplete();
@@ -96,16 +103,9 @@ namespace NotificationsAgent
             return toast;
         }
 
-        private bool active;
-
-        private DataInitializeTaskOutput dataInitializeTaskOutput;
-        private long lastCheckTime;
-        private long currentTime;
-
         private void processNotifications(bool succeeded)
         {
-            if(dataInitializeTaskOutput.isNotificationActive &&
-                    succeeded)
+            if(succeeded)
             {
                 notificationsLoop();
             }
@@ -116,8 +116,7 @@ namespace NotificationsAgent
             long interval = dataInitializeTaskOutput.interval;
             DateTime from = dataInitializeTaskOutput.timeRangeFrom;
             DateTime to = dataInitializeTaskOutput.timeRangeTo;
-            //TODO usunąć wykrzyknik
-            while(!active)
+            while (dataInitializeTaskOutput.isNotificationActive)
             {
                 notificationsLoopTick(interval, from, to);
             }
@@ -125,7 +124,7 @@ namespace NotificationsAgent
 
         private void notificationsLoopTick(long interval, DateTime from, DateTime to)
         {
-            currentTime = DateTime.Now.Millisecond;
+            currentTime = DateTime.Now.Ticks;
             if(currentTime > lastCheckTime + interval)
             {
                 if(dataInitializeTaskOutput.isTimeRangeActive)
@@ -184,25 +183,24 @@ namespace NotificationsAgent
 
         private void runNotificationsPublisher()
         {
-            Unit unit = dataInitializeTaskOutput.configXmlResult.GetUnitById("Jakieś id ...");
+            Unit unit = dataInitializeTaskOutput.configXmlResult.GetUnitById(
+                dataInitializeTaskOutput.CurrentUnitId);
             int i = 0;
-            foreach (KeyValuePair<String, object> category in dataInitializeTaskOutput.allValues)
+            foreach (KeyValuePair<String, Boolean> category in dataInitializeTaskOutput.categories)
             {
+                if (category.Value)
+                {
+                    Section section = unit.Sections.GetSectionById(category.Key);
+                    List<Feed> newestFeeds = GetNewElements(section, unit);
+                    publishNotifications(newestFeeds, section, i);
 
-                //TODO przywrócić :P
-                //if(category.Value)
-                //{
-                //    Section section = unit.Sections.GetSectionById(category.Key);
-                //    List<Feed> newestFeeds = GetNewElements(section, unit);
-                //    publishNotifications(newestFeeds,section,i);
+                    RestolableDateTime RestolableDateTime = new RestolableDateTime(DateTime.Now);
 
-                //    RestolableDateTime RestolableDateTime = new RestolableDateTime(DateTime.Now);
-
-                //    _dataManager.StoreData(
-                //        RestolableDateTime, 
-                //        category.Key);
-                //}
-                //i++;
+                    _dataManager.StoreData(
+                        RestolableDateTime,
+                        category.Key);
+                }
+                i++;
             }
         }
 
@@ -237,7 +235,7 @@ namespace NotificationsAgent
 
                 JsonParser jsonParser = new JsonParser();
 
-                FeedsRoot notificationElements = 
+                List<Feed> notificationElements = 
                     jsonParser.ParseFeedsJson(jsonContent);
 
                 RestolableDateTime lastKnownDate =
@@ -263,6 +261,8 @@ namespace NotificationsAgent
 
             dataInitializeTaskOutput = new DataInitializeTaskOutput();
 
+            UnitIdFinderTask unitIdFinderTask = new UnitIdFinderTask();
+            tasksQueue.add(unitIdFinderTask, null);
 
             PropertiesXmlTask propertiesXmlTask = new PropertiesXmlTask();
             PropertiesXmlTaskInput propertiesXmlTaskInput = new PropertiesXmlTaskInput(
@@ -287,8 +287,8 @@ namespace NotificationsAgent
 
 
             tasksQueue.performAll(dataInitializeTaskOutput);
-
-            return dataInitializeTaskOutput.isValid();
+            dataInitializeTaskOutput.PrintExceptions();
+            return dataInitializeTaskOutput.Succeeded;
         }
 
         private void publishNotifications(List<Feed> newestFeeds,

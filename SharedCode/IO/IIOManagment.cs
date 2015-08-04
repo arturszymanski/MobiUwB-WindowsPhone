@@ -22,14 +22,12 @@ namespace SharedCode.IO
             StreamType streamType,
             out Stream stream);
 
-        Task<DownloadResult> DownloadFileFromWebToStorageFolder(
-            Uri uriToDownload, 
-            String destinationFileName,
+        Task<DownloadResult> DownloadFileFromWebToStorageFolder(Uri uriToDownload, 
+            string destinationFileName, 
             CancellationToken cToken);
 
-        Task<DownloadResult> DownloadFileFromWebToStorageFolder(
-            String internetFilePath,
-            String destinationFileName,
+        Task<DownloadResult> DownloadFileFromWebToStorageFolder(string internetFilePath, 
+            string destinationFileName, 
             CancellationToken cToken);
 
         Task CopyFileFromAssetsToStorageFolder(String filePath);

@@ -107,11 +107,9 @@ namespace MobiUwB.IO
         }
 
 
-        public async Task<DownloadResult> DownloadFileFromWebToStorageFolder(
-            Uri uriToDownload, 
-            String destinationFileName, 
-            CancellationToken cToken)
+        public async Task<DownloadResult> DownloadFileFromWebToStorageFolder(Uri uriToDownload, string destinationFileName, CancellationToken cToken)
         {
+            DownloadResult result = new DownloadResult();
             try
             {
                 using (Stream mystr = await DownloadFile(uriToDownload))
@@ -131,23 +129,23 @@ namespace MobiUwB.IO
                         }
                     }
                 }
-                return DownloadResult.Succeded;
+                result.AddException(DownloadInfo.Succeded);
+                return result;
             }
-            catch (OperationCanceledException)
+            catch (OperationCanceledException exception)
             {
-                return DownloadResult.Cancelled;
+                result.AddException(DownloadInfo.Cancelled, exception);
+                return result;
             }
-            catch (Exception e)
+            catch (Exception exception)
             {
-                return DownloadResult.Other; 
+                result.AddException(DownloadInfo.Other, exception);
+                return result;
             }
         }
 
 
-        public async Task<DownloadResult> DownloadFileFromWebToStorageFolder(
-            String internetFilePath,
-            String destinationFileName,
-            CancellationToken cToken)
+        public async Task<DownloadResult> DownloadFileFromWebToStorageFolder(string internetFilePath, string destinationFileName, CancellationToken cToken)
         {
             Uri dowloadFileUri = new Uri(internetFilePath);
             return await DownloadFileFromWebToStorageFolder(

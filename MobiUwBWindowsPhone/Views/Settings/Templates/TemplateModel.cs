@@ -10,6 +10,7 @@ using MobiUwB.Views.Settings.Templates.CheckBoxItem.Model;
 using MobiUwB.Views.Settings.Templates.ListPicker.Model;
 using MobiUwB.Views.Settings.Templates.SwitchItem.Model;
 using MobiUwB.Views.Settings.Templates.TimePicker.Model;
+using SharedCode;
 using SharedCode.DataManagment;
 using SharedCode.Parsers.Models.ConfigurationXML;
 
@@ -58,67 +59,67 @@ namespace MobiUwB.Views.Settings.Templates
         public TemplateModel GetDefaults()
         {
             SwitchTemplateModel notifications = new SwitchTemplateModel();
-            notifications.ID = ;
+            notifications.ID = Defaults.NotificationsActiveId;
             notifications.Text = AppResources.SettingsPageCategoryNotifications;
             notifications.IsChecked = true;
 
             ListPickerTemplateModel<Int64> frequency = new ListPickerTemplateModel<Int64>();
-            frequency.ID = ;
+            frequency.ID = Defaults.FrequencyId;
             frequency.Text = AppResources.SettingsPageCategoryFrequency;
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
-                    "1" + AppResources.SettingsListItemMinute,
+                    "1" + AppResources.SettingsListItemMinute,Defaults.Frequencies[0]
                     ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
-                    "10" + AppResources.SettingsListItemMinute,
+                    "10" + AppResources.SettingsListItemMinute,Defaults.Frequencies[1]
                     ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
-                    "1" + AppResources.SettingsListItemHour,
+                    "1" + AppResources.SettingsListItemHour,Defaults.Frequencies[2]
                     ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
-                    "2" + AppResources.SettingsListItemHour,
+                    "2" + AppResources.SettingsListItemHour,Defaults.Frequencies[3]
                     ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
-                    "6" + AppResources.SettingsListItemHour,
+                    "6" + AppResources.SettingsListItemHour,Defaults.Frequencies[4]
                     ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
-                    "12" + AppResources.SettingsListItemHour,
+                    "12" + AppResources.SettingsListItemHour,Defaults.Frequencies[5]
                     ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
-                    "1" + AppResources.SettingsListItemDay,
+                    "1" + AppResources.SettingsListItemDay,Defaults.Frequencies[6]
                     ));
 
-            frequency.Value = 0;
+            frequency.Value = Defaults.DefaultFrequencyIndex;
             notifications.Children.Add(frequency);
 
             SwitchTemplateModel timeRange = new SwitchTemplateModel();
-            timeRange.ID = ;
+            timeRange.ID = Defaults.TimeRangeId;
             timeRange.Text = AppResources.SettingsPageCategoryTimeRange;
-            timeRange.IsChecked = true;
+            timeRange.IsChecked = Defaults.TimeRangeDefaultValue;
 
             TimePickerTemplateModel from = new TimePickerTemplateModel();
-            @from.ID = ;
+            @from.ID = Defaults.FromId;
             @from.Text = AppResources.SettingsPageCategoryFrom;
-            @from.Value = DateTime.Now;
+            @from.Value = Defaults.FromDefaultValue;
             timeRange.Children.Add(@from);
 
             TimePickerTemplateModel to = new TimePickerTemplateModel();
-            to.ID = "to";
+            to.ID = Defaults.ToId;
             to.Text = AppResources.SettingsPageCategoryTo;
-            to.Value = DateTime.Now;
+            to.Value = Defaults.ToDefaultValue;
             timeRange.Children.Add(to);
             notifications.Children.Add(timeRange);
 

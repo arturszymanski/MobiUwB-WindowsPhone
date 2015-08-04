@@ -50,20 +50,26 @@ namespace MobiUwB.StartupConfig.Worker
                 propTask.Wait();
                 Task configTask = DeserializeConfigurationXml(_result);
                 configTask.Wait();
+                StoreCurrentUnitId(_result);
             }
             catch (Exception exception)
             {
-                _result.AddError(exception);
+                _result.AddException(exception);
             }
             OnStartupBackgroundWorker_DoWorkEnd(e);
         }
 
         private void OnStartupBackgroundWorker_DoWorkEnd(DoWorkEventArgs e)
         {
-            foreach (string error in _result.GetErrors())
-            {
-                Debug.WriteLine(error);
-            }
+            _result.PrintExceptions();
+        }
+
+        private void StoreCurrentUnitId(StartupConfigurationResult result)
+        {
+            UnitIdStorer unitIdStorer = new UnitIdStorer();
+            Globals.CurrentUnitId = result.Properties.Websites.DefaultWebsite.Id;
+            unitIdStorer.RunWorkerAsync(
+                Globals.CurrentUnitId);
         }
 
         private async Task DeserializeConfigurationXml(StartupConfigurationResult result)
@@ -90,7 +96,7 @@ namespace MobiUwB.StartupConfig.Worker
             }
             else
             {
-                result.AddErrorMessages(versioningResult.GetErrors());
+                result.AddExceptions(versioningResult.GetExceptions());
             }
         }
 

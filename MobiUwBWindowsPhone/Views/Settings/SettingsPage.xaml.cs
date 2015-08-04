@@ -15,6 +15,7 @@ using SharedCode.DataManagment;
 using SharedCode.Utilities;
 using System.Threading;
 using Windows.Phone.Speech.VoiceCommands;
+using MobiUwB.Utilities;
 using MobiUwB.Views.Settings.Templates.CheckBoxItem.Model;
 using MobiUwB.Views.Settings.Templates.ListPicker.Model;
 using MobiUwB.Views.Settings.Templates.SwitchItem.Model;
@@ -59,7 +60,7 @@ namespace MobiUwB.Views.Settings
 
         private void StoreModelsValues()
         {
-            using (Mutex mutex = new Mutex(true, Variables.SettingsValuesMutexName))
+            using (Mutex mutex = new Mutex(true, Globals.CurrentUnitId))
             {
                 mutex.WaitOne();
                 try
@@ -84,7 +85,7 @@ namespace MobiUwB.Views.Settings
 
             using (IsolatedStorageFileStream isolatedStorageFileStream = 
                 new IsolatedStorageFileStream(
-                    Variables.SettingsValuesFileName, 
+                    Globals.CurrentUnitId, 
                     FileMode.OpenOrCreate, 
                     isolatedStorageFile))
             {

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace SharedCode.Parsers.Json.Model
 {
     [DataContract]
-    public class FeedsRoot : IEnumerable<Feed>
+    public class FeedsRoot
     {
         private List<Feed> _feeds;
         [DataMember]
@@ -21,16 +21,6 @@ namespace SharedCode.Parsers.Json.Model
         public FeedsRoot()
         {
             _feeds = new List<Feed>();
-        }
-
-        public IEnumerator<Feed> GetEnumerator()
-        {
-            return _feeds.GetEnumerator();
-        }
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return _feeds.GetEnumerator();
         }
     }
 }

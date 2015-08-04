@@ -8,7 +8,7 @@ namespace SharedCode.Utilities
 {
     public static class Variables
     {
-        public const String SettingsValuesMutexName = "Settings";
-        public const String SettingsValuesFileName = "Setting.json";
+        public const String UnitIdMutexName = "UnitId";
+        public const String UnitIdFileName = "Unit.json";
     }
 }

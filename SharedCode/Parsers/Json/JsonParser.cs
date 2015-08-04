@@ -11,15 +11,15 @@ namespace SharedCode.Parsers.Json
 {
     public class JsonParser
     {
-        public FeedsRoot ParseFeedsJson(String jsonContent)
+        public List<Feed> ParseFeedsJson(String jsonContent)
         {
-            DataContractJsonSerializer serializer = 
-                new DataContractJsonSerializer(typeof(FeedsRoot));
+            DataContractJsonSerializer serializer =
+                new DataContractJsonSerializer(typeof(List<Feed>));
 
-            FeedsRoot jsonRoot;
+            List<Feed> jsonRoot;
             using (Stream jsonStream = GenerateStreamFromString(jsonContent))
             {
-                jsonRoot = (FeedsRoot)serializer.ReadObject(jsonStream);
+                jsonRoot = (List<Feed>)serializer.ReadObject(jsonStream);
             }
             return jsonRoot;
         }

@@ -33,12 +33,15 @@ namespace NotificationsAgent.DataInitialize.Tasks.VersionController
             Task<VersioningResult> versioningResultTask = versionController.GetNewestFile(versioningRequest);
             VersioningResult versioningResult = versioningResultTask.Result;
 
-            output.addErrors(versioningResult.GetErrors());
+            output.AddExceptions(versioningResult.GetExceptions());
 
-            ScheduledAgent.IoManager.GetFileStreamFromStorageFolder(
-                configurationFileName,
-                StreamType.ForWrite,
-                out output.configurationFile);
+            if (output.Succeeded)
+            {
+                ScheduledAgent.IoManager.GetFileStreamFromStorageFolder(
+                    configurationFileName,
+                    StreamType.ForWrite,
+                    out output.configurationFile);
+            }
 
             output.versioningResult = versioningResult;
         }

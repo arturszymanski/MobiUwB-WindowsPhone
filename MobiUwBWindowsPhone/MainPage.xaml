@@ -49,7 +49,7 @@
                                       Opacity="0.1"
                                       LoadCompleted="Main_WebBrowser_LoadCompleted" 
                                       Navigating="MainWebBrowser_Navigating"
-                                      Navigated="MainWebBrowser_OnNavigated"
+                                      Navigated="MainWebBrowser_OnNavigated" NavigationFailed="MainWebBrowser_NavigationFailed"
                                       />
                 </Grid>
             </phone:PivotItem>
@@ -158,18 +158,22 @@
         <Grid Name="ProgressIndicatorScreen"
               HorizontalAlignment="Stretch"
               VerticalAlignment="Stretch"
-              Background="Black"
               Visibility="Collapsed"
               Canvas.ZIndex="1"
-              Opacity="0.7">
+              Background="Black"
+              Opacity="0.5">
             
             <StackPanel Orientation="Vertical"
                         HorizontalAlignment="Stretch"
-                        VerticalAlignment="Center">
+                        VerticalAlignment="Center"
+                        Opacity="1">
             
                 <TextBlock Text="Ładowanie..."
-                           HorizontalAlignment="Center"/>
-                <ProgressBar IsIndeterminate="True"/>
+                           HorizontalAlignment="Center"
+                           Foreground="White"/>
+                
+                <ProgressBar IsIndeterminate="True"
+                             Opacity="1"/>
             </StackPanel>
         </Grid>
     </Grid>
@@ -179,10 +183,6 @@
             <shell:ApplicationBarIconButton IconUri="/Assets/AppBarIcons/refresh.png" 
                                             Text="Odśwież" 
                                             Click="RefreshButton_Click"/>
-            
-            <shell:ApplicationBarIconButton IconUri="/Assets/Geba.png" 
-                                            Text="HAHA" 
-                                            Click="Toast_Click"/>
 
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="Ustawienia"

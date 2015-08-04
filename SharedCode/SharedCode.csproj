@@ -40,8 +40,10 @@
     <Compile Include="DataManagment\IRestolable.cs" />
     <Compile Include="Defaults.cs" />
     <Compile Include="InstitiuteModel.cs" />
-    <Compile Include="IO\IIOManagment.cs" />
     <Compile Include="IO\DownloadResult.cs" />
+    <Compile Include="IO\IIOManagment.cs" />
+    <Compile Include="IO\DownloadInfo.cs" />
+    <Compile Include="IO\IOResult.cs" />
     <Compile Include="IO\StreamType.cs" />
     <Compile Include="Parsers\Json\JsonParser.cs" />
     <Compile Include="Parsers\Json\Model\Feed.cs" />
@@ -69,6 +71,7 @@
     <Compile Include="Tasks\Models\TaskOutput.cs" />
     <Compile Include="Tasks\TasksQueue.cs" />
     <Compile Include="Utilities\SettingsCategoriesValuesWrapper.cs" />
+    <Compile Include="Utilities\UnitIdWrapper.cs" />
     <Compile Include="Utilities\Variables.cs" />
     <Compile Include="VersionControl\Models\VersioningRequest.cs" />
     <Compile Include="VersionControl\Models\VersioningResult.cs" />

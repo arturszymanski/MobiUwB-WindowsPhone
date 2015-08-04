@@ -1,6 +1,7 @@
 ﻿#region
 
 using System;
+using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
@@ -57,42 +58,22 @@ namespace SharedCode.VersionControl
             }
             catch (Exception e)
             {
-                result.AddError(e);
+                result.AddException(e);
             }
             return result;
         }
 
-        private async Task<Boolean> DownloadFile(VersioningRequest request)
+        private async Task DownloadFile(VersioningRequest request)
         {
-            DownloadResult downloadResult = await _ioManager.DownloadFileFromWebToStorageFolder(
+            DownloadResult downloadInfo = await _ioManager.DownloadFileFromWebToStorageFolder(
                 request.GetInternetFile(),
                 request.GetDestinationFileName(),
                 CancellationToken.None);
 
-            switch (downloadResult)
+            if (!downloadInfo.Succeeded)
             {
-                case DownloadResult.Succeded:
-                    {
-                        return true;
-                    }
-                case DownloadResult.Failed:
-                    {
-                        throw new Exception("Downloading failed");
-                    }
-                case DownloadResult.Other:
-                    {
-                        throw new Exception("Any exception occured");
-                    }
-                case DownloadResult.Cancelled:
-                    {
-                        throw new Exception("Downloading cancelled");
-                    }
-                default:
-                    {
-                        throw new ArgumentException("Undefined result type");
-                    }
+                throw downloadInfo.GetExceptions().FirstOrDefault();
             }
-            return false;
         }
 
         private async Task<Boolean> CheckIfFileIsCurrent(VersioningRequest request)
@@ -122,7 +103,12 @@ namespace SharedCode.VersionControl
                 req.EndGetResponse,
                 req))
             {
-                dt = DateTime.Parse(response.Headers["Last-Modified"]);
+                String lastModifiedHeaderContent = response.Headers["Last-Modified"];
+                if (String.IsNullOrEmpty(lastModifiedHeaderContent))
+                {
+                    return DateTime.Now;
+                }
+                dt = DateTime.Parse(lastModifiedHeaderContent);
             }
             return dt;
         }

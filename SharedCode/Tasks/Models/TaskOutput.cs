@@ -7,33 +7,41 @@ using System.Collections.Generic;
 
 namespace SharedCode.Tasks.Models
 {
-    public abstract class TaskOutput
+    public abstract class TaskOutput : Result
     {
-        private readonly List<String> errors;
+        //private readonly List<String> errors;
 
-        protected TaskOutput()
-        {
-            errors = new List<String>();
-        }
+        //protected TaskOutput()
+        //{
+        //    errors = new List<String>();
+        //}
 
-        public void addError(String errorMessage)
-        {
-            errors.Add(errorMessage);
-        }
+        //public void AddError(String errorMessage)
+        //{
+        //    errors.Add(errorMessage);
+        //}
 
-        public void addErrors(IList<String> errorMessages)
-        {
-            errors.AddRange(errorMessages);
-        }
+        //public void AddErrors(IList<String> errorMessages)
+        //{
+        //    errors.AddRange(errorMessages);
+        //}
 
-        public List<String> getErrors()
-        {
-            return errors;
-        }
+        //public void AddErrors(IList<Exception> errorMessages)
+        //{
+        //    foreach (Exception exception in errorMessages)
+        //    {
+        //        AddError(exception.Message);
+        //    }
+        //}
 
-        public bool isValid()
-        {
-            return errors.Count == 0;
-        }
+        //public List<String> GetErrors()
+        //{
+        //    return errors;
+        //}
+
+        //public bool IsValid()
+        //{
+        //    return errors.Count == 0;
+        //}
     }
 }

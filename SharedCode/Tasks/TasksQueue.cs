@@ -24,9 +24,12 @@ namespace SharedCode.Tasks
         {
             foreach (TaskPair tuple in tasks)
             {
-                ITask<Out> task = tuple.task;
-                TaskInput input = tuple.taskInput;
-                task.Execute(input, outputToFill);
+                if (outputToFill.Succeeded)
+                {
+                    ITask<Out> task = tuple.task;
+                    TaskInput input = tuple.taskInput;
+                    task.Execute(input, outputToFill);
+                }
             }
         }
 

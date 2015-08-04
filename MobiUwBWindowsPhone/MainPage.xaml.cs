@@ -4,8 +4,13 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
+using System.IO.IsolatedStorage;
+using System.Runtime.Serialization.Json;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
@@ -15,6 +20,7 @@ using MobiUwB.StartupConfig;
 using MobiUwB.Utilities;
 using SharedCode.Parsers;
 using SharedCode;
+using SharedCode.Utilities;
 
 #endregion
 
@@ -79,7 +85,8 @@ namespace MobiUwB
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         {
             string pingPage = StartupConfiguration.Properties.Websites.DefaultWebsite.Ping;
-            if (MainWebBrowser.Source.OriginalString != pingPage)
+            if (MainWebBrowser.Source != null && 
+                MainWebBrowser.Source.OriginalString != pingPage)
             {
                 e.Cancel = true;
                 MainWebBrowser.GoBack();
@@ -131,6 +138,11 @@ namespace MobiUwB
             {
                 StartupConfiguration.Properties.Websites.DefaultWebsite = 
                     selectedItem.Website;
+
+                Globals.CurrentUnitId = selectedItem.Website.Id;
+                UnitIdStorer unitIdStorer = new UnitIdStorer();
+                unitIdStorer.RunWorkerAsync(Globals.CurrentUnitId);
+
                 try
                 {
                     App.XmlParser.Serialize(
@@ -159,6 +171,16 @@ namespace MobiUwB
         }
 
         private void Main_WebBrowser_LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            EnableMainScreen();
+        }
+
+        private void MainWebBrowser_NavigationFailed(object sender, NavigationFailedEventArgs e)
+        {
+            EnableMainScreen();
+        }
+
+        private void EnableMainScreen()
         {
             MainWebBrowser.Opacity = 1;
             SetEnabledForApplicationBarImageButtons(true);
@@ -207,10 +229,6 @@ namespace MobiUwB
         }
 
         private void MainWebBrowser_OnNavigated(object sender, NavigationEventArgs e)
-        {
-        }
-
-        private void Toast_Click(object sender, EventArgs e)
         {
         }
     }

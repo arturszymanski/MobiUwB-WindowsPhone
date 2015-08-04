@@ -1,0 +1,18 @@
+D:\programowanie\C# Projects\VS2013\MobiUwB-WindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.csprojResolveAssemblyReference.cache
+D:\programowanie\C# Projects\VS2013\MobiUwB-WindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.Resources.Resources.resources
+D:\programowanie\C# Projects\VS2013\MobiUwB-WindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.csproj.GenerateResource.Cache
+D:\programowanie\C# Projects\VS2013\MobiUwB-WindowsPhone\NotificationsAgent\Bin\Debug\NotificationsAgent.dll
+D:\programowanie\C# Projects\VS2013\MobiUwB-WindowsPhone\NotificationsAgent\Bin\Debug\NotificationsAgent.pdb
+D:\programowanie\C# Projects\VS2013\MobiUwB-WindowsPhone\NotificationsAgent\Bin\Debug\SharedCode.dll
+D:\programowanie\C# Projects\VS2013\MobiUwB-WindowsPhone\NotificationsAgent\Bin\Debug\SharedCode.pdb
+D:\programowanie\C# Projects\VS2013\MobiUwB-WindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.dll
+D:\programowanie\C# Projects\VS2013\MobiUwB-WindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.pdb
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\NotificationsAgent\Bin\Debug\NotificationsAgent.dll
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\NotificationsAgent\Bin\Debug\NotificationsAgent.pdb
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\NotificationsAgent\Bin\Debug\SharedCode.dll
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\NotificationsAgent\Bin\Debug\SharedCode.pdb
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.csprojResolveAssemblyReference.cache
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.Resources.Resources.resources
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.csproj.GenerateResource.Cache
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.dll
+E:\Users\Tunczyk\Documents\Programowanie\MojGithub\MobiUwB-WindowsPhone\NotificationsAgent\obj\Debug\NotificationsAgent.pdb

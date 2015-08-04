@@ -9,7 +9,9 @@
     <Border 
         BorderThickness="{StaticResource SettingsElementBorderThickness}"
         BorderBrush="{StaticResource PhoneForegroundBrush}">
-        <Grid Tap="Grid_Tap"
+        <Grid 
+            MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown"
+            MouseLeftButtonUp="UIElement_OnMouseLeftButtonUp"
             Height="{StaticResource SettingsTemplateHeight}"
             Background="{StaticResource DebugTemplateBackground}">
             <Grid.ColumnDefinitions>

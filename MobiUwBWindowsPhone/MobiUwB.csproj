@@ -115,6 +115,7 @@
     <Compile Include="StartupConfig\StartupConfiguration.cs" />
     <Compile Include="StartupConfig\Worker\StartupBackgroundWorker.cs" />
     <Compile Include="StartupConfig\Worker\StartupConfigurationResult.cs" />
+    <Compile Include="UnitIdStorer.cs" />
     <Compile Include="Utilities\Globals.cs" />
     <Compile Include="Utilities\ToastManager.cs" />
     <Compile Include="Utilities\PivotItemType.cs" />
@@ -222,7 +223,6 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Geba.png" />
     <Content Include="Assets\logouwb.png" />
     <Content Include="Assets\properties.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
