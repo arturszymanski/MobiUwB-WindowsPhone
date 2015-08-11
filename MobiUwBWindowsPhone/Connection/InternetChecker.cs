@@ -250,7 +250,7 @@ namespace MobiUwB.Connection
                 }
             }
 
-            ToastManager.ShowToast(title, message, bitmapImage);
+            Toaster.Make(title, message, bitmapImage);
         }
     }
 }

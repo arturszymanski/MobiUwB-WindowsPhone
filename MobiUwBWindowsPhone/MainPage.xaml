@@ -132,7 +132,7 @@
                                             </Grid.ColumnDefinitions>
 
                                             <Grid Grid.Column="0">
-                                                <Image Source="{Binding Icon}"
+                                                <Image Source="{Binding IconPath}"
                                                    Margin="2,2,2,2"/>
                                             </Grid>
 

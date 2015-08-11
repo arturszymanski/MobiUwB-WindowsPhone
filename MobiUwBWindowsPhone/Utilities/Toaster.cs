@@ -9,11 +9,11 @@ using Coding4Fun.Toolkit.Controls;
 
 namespace MobiUwB.Utilities
 {
-    public static class ToastManager
+    public static class Toaster
     {
         private const Orientation TextOrientation = Orientation.Horizontal;
 
-        public static void ShowToast(
+        public static void Make(
             String title,
             String message = "",
             BitmapImage bitmapImage = null)

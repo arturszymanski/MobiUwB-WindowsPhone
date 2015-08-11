@@ -219,4 +219,7 @@
   <data name="NotificationsBackgroundAgentNotAvailable" xml:space="preserve">
     <value>Użytkownik nie zezwolił aplikacji na działanie w tle.</value>
   </data>
+  <data name="SettingsPageWrongTimeRange" xml:space="preserve">
+    <value>Zły przedział godzin</value>
+  </data>
 </root>

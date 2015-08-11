@@ -28,6 +28,7 @@ namespace MobiUwB
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        private WebBrowserState _webBrowserState;
 
         public MainPage()
         {
@@ -78,22 +79,40 @@ namespace MobiUwB
             SetEnabledForApplicationBarImageButtons(false);
             ProgressIndicatorScreen.Visibility = Visibility.Visible;
             MainWebBrowser.Opacity = 0.1;
-            MainWebBrowser.Navigate(MainWebBrowser.Source);
+            if (MainWebBrowser.Source != null)
+            {
+                MainWebBrowser.Navigate(MainWebBrowser.Source);
+            }
         }
 
 
-        protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
+        protected override void OnBackKeyPress(CancelEventArgs e)
         {
             string pingPage = StartupConfiguration.Properties.Websites.DefaultWebsite.Ping;
+
             if (MainWebBrowser.Source != null && 
                 MainWebBrowser.Source.OriginalString != pingPage)
             {
                 e.Cancel = true;
-                MainWebBrowser.GoBack();
+                if (MainWebBrowser.CanGoBack)
+                {
+                    MainWebBrowser.GoBack();
+                }
             }
             else
             {
-                base.OnBackKeyPress(e);
+                if (_webBrowserState == WebBrowserState.Filed)
+                {
+                    e.Cancel = true;
+                    if (MainWebBrowser.CanGoBack)
+                    {
+                        MainWebBrowser.GoBack();
+                    }
+                }
+                else
+                {
+                    base.OnBackKeyPress(e);
+                }
             }
         }
 
@@ -170,16 +189,6 @@ namespace MobiUwB
             ProgressIndicatorScreen.Visibility = Visibility.Visible;
         }
 
-        private void Main_WebBrowser_LoadCompleted(object sender, NavigationEventArgs e)
-        {
-            EnableMainScreen();
-        }
-
-        private void MainWebBrowser_NavigationFailed(object sender, NavigationFailedEventArgs e)
-        {
-            EnableMainScreen();
-        }
-
         private void EnableMainScreen()
         {
             MainWebBrowser.Opacity = 1;
@@ -218,8 +227,7 @@ namespace MobiUwB
 
         private void MainWebBrowser_Navigating(object sender, NavigatingEventArgs e)
         {
-            Debug.WriteLine("e.Uri");
-            Debug.WriteLine(e.Uri);
+            _webBrowserState = WebBrowserState.Navigating;
             if(e.Uri.AbsolutePath.EndsWith(".pdf") &&
                 !e.Uri.AbsolutePath.StartsWith("http://docs.google.com/gview?embedded=true&url="))
             {
@@ -230,6 +238,19 @@ namespace MobiUwB
 
         private void MainWebBrowser_OnNavigated(object sender, NavigationEventArgs e)
         {
+            _webBrowserState = WebBrowserState.Navigated;
+        }
+
+        private void Main_WebBrowser_LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            _webBrowserState = WebBrowserState.Navigated;
+            EnableMainScreen();
+        }
+
+        private void MainWebBrowser_NavigationFailed(object sender, NavigationFailedEventArgs e)
+        {
+            _webBrowserState = WebBrowserState.Filed;
+            EnableMainScreen();
         }
     }
 }

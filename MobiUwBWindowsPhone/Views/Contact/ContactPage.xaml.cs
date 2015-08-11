@@ -150,13 +150,12 @@ namespace MobiUwB.Views.Contact
             RoundButtonModel model = (RoundButtonModel)roundButton.DataContext;
             Unit unit = (Unit)model.Model;
 
-            MapsDirectionsTask mapsDirectionsTask = new MapsDirectionsTask();
-            mapsDirectionsTask.Start = new LabeledMapLocation(
-                unit.Name, 
-                new GeoCoordinate(
-                    unit.Map.Coordinates.Lattitude,
-                    unit.Map.Coordinates.Longtitude));
-            mapsDirectionsTask.Show();
+            MapsTask mapsTask = new MapsTask();
+            mapsTask.Center = new GeoCoordinate(
+                    unit.Map.Coordinates.Longtitude,
+                    unit.Map.Coordinates.Lattitude);
+            mapsTask.ZoomLevel = 15;
+            mapsTask.Show();
         }
     }
 }

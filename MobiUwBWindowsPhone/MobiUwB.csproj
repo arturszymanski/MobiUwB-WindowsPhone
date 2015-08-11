@@ -117,7 +117,7 @@
     <Compile Include="StartupConfig\Worker\StartupConfigurationResult.cs" />
     <Compile Include="UnitIdStorer.cs" />
     <Compile Include="Utilities\Globals.cs" />
-    <Compile Include="Utilities\ToastManager.cs" />
+    <Compile Include="Utilities\Toaster.cs" />
     <Compile Include="Utilities\PivotItemType.cs" />
     <Compile Include="Utilities\UnitConventer.cs" />
     <Compile Include="Views\About\AboutPage.xaml.cs">
@@ -156,6 +156,7 @@
     <Compile Include="Views\SplashScreen\SplashScreenPage.xaml.cs">
       <DependentUpon>SplashScreenPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WebBrowserState.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

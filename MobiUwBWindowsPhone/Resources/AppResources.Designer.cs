@@ -341,6 +341,15 @@ namespace MobiUwB.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Zły przedział godzin.
+        /// </summary>
+        public static string SettingsPageWrongTimeRange {
+            get {
+                return ResourceManager.GetString("SettingsPageWrongTimeRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nie wykryto połączenia z Internetem, prosimy spróbować ponownie..
         /// </summary>
         public static string SomethingWrongPageDescription {

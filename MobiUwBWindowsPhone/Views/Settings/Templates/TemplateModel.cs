@@ -43,7 +43,7 @@ namespace MobiUwB.Views.Settings.Templates
         }
 
         private String _id;
-
+        [DataMember]
         public String ID
         {
             get { return _id; }
@@ -69,37 +69,37 @@ namespace MobiUwB.Views.Settings.Templates
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
-                    "1" + AppResources.SettingsListItemMinute,Defaults.Frequencies[0]
+                    "1 " + AppResources.SettingsListItemMinute,Defaults.Frequencies[0]
                     ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
-                    "10" + AppResources.SettingsListItemMinute,Defaults.Frequencies[1]
+                    "10 " + AppResources.SettingsListItemMinute,Defaults.Frequencies[1]
                     ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
-                    "1" + AppResources.SettingsListItemHour,Defaults.Frequencies[2]
+                    "1 " + AppResources.SettingsListItemHour,Defaults.Frequencies[2]
                     ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
-                    "2" + AppResources.SettingsListItemHour,Defaults.Frequencies[3]
+                    "2 " + AppResources.SettingsListItemHour,Defaults.Frequencies[3]
                     ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
-                    "6" + AppResources.SettingsListItemHour,Defaults.Frequencies[4]
+                    "6 " + AppResources.SettingsListItemHour,Defaults.Frequencies[4]
                     ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
-                    "12" + AppResources.SettingsListItemHour,Defaults.Frequencies[5]
+                    "12 " + AppResources.SettingsListItemHour,Defaults.Frequencies[5]
                     ));
 
             frequency.Items.Add(
                 new ListPickerTemplateModel<long>.ListPickerItem(
-                    "1" + AppResources.SettingsListItemDay,Defaults.Frequencies[6]
+                    "1 " + AppResources.SettingsListItemDay,Defaults.Frequencies[6]
                     ));
 
             frequency.Value = Defaults.DefaultFrequencyIndex;

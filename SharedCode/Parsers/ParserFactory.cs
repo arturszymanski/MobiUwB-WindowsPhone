@@ -13,6 +13,7 @@ namespace SharedCode.Parsers
         public static List<InstitiuteModel> GenerateInstituteModels(
             List<Website> websites, String imagePath)
         {
+            //TODO odnaleźć jaka to jest jednostka i pobrać z niej string z logiem 
             List<InstitiuteModel> modelsList = new List<InstitiuteModel>();
             foreach (var website in websites)
             {

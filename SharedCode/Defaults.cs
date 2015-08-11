@@ -14,8 +14,22 @@ namespace SharedCode
         public const String TimeRangeId = "timeRange";
         public const String FromId = "from";
         public const String ToId = "to";
-        public static readonly DateTime FromDefaultValue = DateTime.Now;
-        public static readonly DateTime ToDefaultValue = DateTime.Now;
+        public static readonly DateTime FromDefaultValue = 
+            new DateTime(
+                DateTime.Now.Year, 
+                DateTime.Now.Month, 
+                DateTime.Now.Day, 
+                6, 
+                0,
+                0);
+        public static readonly DateTime ToDefaultValue =
+            new DateTime(
+                DateTime.Now.Year,
+                DateTime.Now.Month,
+                DateTime.Now.Day,
+                18,
+                0,
+                0);
         public const int DefaultFrequencyIndex = 0;
         public const String currentUnitId = "currentUnitId";
         public const bool TimeRangeDefaultValue = true;

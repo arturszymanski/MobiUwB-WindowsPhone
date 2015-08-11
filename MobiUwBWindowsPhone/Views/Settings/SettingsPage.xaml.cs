@@ -15,11 +15,13 @@ using SharedCode.DataManagment;
 using SharedCode.Utilities;
 using System.Threading;
 using Windows.Phone.Speech.VoiceCommands;
+using MobiUwB.Resources;
 using MobiUwB.Utilities;
 using MobiUwB.Views.Settings.Templates.CheckBoxItem.Model;
 using MobiUwB.Views.Settings.Templates.ListPicker.Model;
 using MobiUwB.Views.Settings.Templates.SwitchItem.Model;
 using MobiUwB.Views.Settings.Templates.TimePicker.Model;
+using SharedCode;
 
 #endregion
 
@@ -29,6 +31,22 @@ namespace MobiUwB.Views.Settings
     {
         static Random _radnom = new Random();
         private readonly DataManager _dataManager;
+
+        private TimePickerTemplateModel _timePickerToTemplateModel;
+
+        public TimePickerTemplateModel TimePickerToTemplateModel
+        {
+            get { return _timePickerToTemplateModel; }
+            private set { _timePickerToTemplateModel = value; }
+        }
+
+        private TimePickerTemplateModel _timePickerFromTemplateModel;
+
+        public TimePickerTemplateModel TimePickerFromTemplateModel
+        {
+            get { return _timePickerFromTemplateModel; }
+            private set { _timePickerFromTemplateModel = value; }
+        }
 
         public SettingsPage()
         {
@@ -40,8 +58,33 @@ namespace MobiUwB.Views.Settings
 
         private void SettingsPage_OnLoaded(object sender, RoutedEventArgs e)
         {
-            Expander.DataContext = _dataManager.RestoreData<TemplateModel>(
+            TemplateModel baseTemplateModel = _dataManager.RestoreData<TemplateModel>(
                 StartupConfiguration.Properties.Websites.DefaultWebsite.Id);
+            Expander.DataContext = baseTemplateModel;
+            DistinguishTemplateModels(baseTemplateModel);
+            TimePickerFromTemplateModel.Validate += TimePickerFromTemplateModel_Validate;
+            TimePickerToTemplateModel.Validate += TimePickerToTemplateModel_Validate;
+        }
+
+        private void DistinguishTemplateModels(TemplateModel baseTemplateModel)
+        {
+            switch (baseTemplateModel.ID)
+            {
+                case Defaults.FromId:
+                {
+                    TimePickerFromTemplateModel = (TimePickerTemplateModel)baseTemplateModel;
+                    break;
+                }
+                case Defaults.ToId:
+                {
+                    TimePickerToTemplateModel = (TimePickerTemplateModel)baseTemplateModel;
+                    break;
+                }
+            }
+            foreach (TemplateModel templateModel in baseTemplateModel.Children)
+            {
+                DistinguishTemplateModels(templateModel);
+            }
         }
 
 
@@ -152,6 +195,25 @@ namespace MobiUwB.Views.Settings
                     settingsCategoriesValuesWrapper,
                     model);
             }
+        }
+        private bool TimePickerFromTemplateModel_Validate(DateTime dt)
+        {
+            bool isValid = dt < TimePickerToTemplateModel.Value;
+            if (!isValid)
+            {
+                Toaster.Make(AppResources.SettingsPageWrongTimeRange);
+            }
+            return isValid;
+        }
+
+        bool TimePickerToTemplateModel_Validate(DateTime dt)
+        {
+            bool isValid = TimePickerFromTemplateModel.Value < dt;
+            if (!isValid)
+            {
+                Toaster.Make(AppResources.SettingsPageWrongTimeRange);
+            }
+            return isValid;
         }
     }
 }
